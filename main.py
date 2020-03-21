@@ -65,6 +65,46 @@ def draw_hexagon(x, y, side_len, color):
     turtle.down()
     turtle.fillcolor(color)
     turtle.end_fill()
+    
+def tesellation(number, color_1, color_2):
+    '''Tiling'''
+    y = 250
+    x = -250
+    diag = int(500/number)
+    side_len = diag/math.sqrt(3)
+    count = 1
+    i = 1
+    turtle.left(30)
+    turtle.up()
+    turtle.goto(x, y)
+    turtle.down()
+    for _ in range(number):
+        if i%2 == 1:
+            for _ in range(number):
+                x += diag
+                count += 1
+                color = alternation_colors(count, color_1, color_2)
+                draw_hexagon(x, y, side_len, color)
+            i += 1
+            y -= side_len * 1.5
+            x -= diag/2
+            turtle.up()
+            turtle.goto(x, y)
+            turtle.down()
+        else:
+            for _ in range(number):
+                x -= diag
+                count += 1
+                color = alternation_colors(count, color_1, color_2)
+                draw_hexagon(x, y, side_len, color)
+            count += 1
+            i += 1
+            y -=side_len * 1.5
+            x += diag/2
+            turtle.up()
+            turtle.goto(x, y)
+            turtle.down()
+
 
 
 def main():
