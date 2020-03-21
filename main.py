@@ -41,6 +41,26 @@ def get_color_choice():
 
     return color
 
+def alternation_colors(count, color_1, color_2):
+    '''Selection of color of each hexagon'''
+    if count % 2 == 0:
+        color = color_1
+    else:
+        color = color_2
+    return color
+
+def draw_hexagon(x, y, side_len, color):
+    '''Drawing hexagon'''
+    turtle.begin_fill()
+    for _ in range(6):
+        turtle.forward(side_len)
+        turtle.right(60)
+    turtle.up()
+    turtle.goto(x,y)
+    turtle.down()
+    turtle.fillcolor(color)
+    turtle.end_fill()
+
 
 def main():
     print(COLOR_LIST)
