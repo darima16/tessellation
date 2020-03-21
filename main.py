@@ -1,6 +1,6 @@
 """Case-study#3
 Developers:
-Rashidova A. (50%), Zhambaeva D. (55%), Ganbat S. (57%)
+Rashidova A. (53%), Zhambaeva D. (55%), Ganbat S. (54%)
 """
 
 from ru_loc import *
