@@ -1,3 +1,8 @@
+"""Case-study#3
+Developers:
+Rashidova A. (50%), Zhambaeva D. (55%), Ganbat S. (57%)
+"""
+
 from ru_loc import *
 import math
 import turtle
